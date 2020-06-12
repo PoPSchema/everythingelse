@@ -53,7 +53,7 @@ class TagFunctionalFieldResolver extends AbstractDBDataFieldResolver
 
     public function resolveValue(TypeResolverInterface $typeResolver, $resultItem, string $fieldName, array $fieldArgs = [], ?array $variables = null, ?array $expressions = null, array $options = [])
     {
-        $cmseverythingelseresolver = \PoP\EverythingElse\ObjectPropertyResolverFactory::getInstance();
+        $applicationtaxonomyapi = \PoP\ApplicationTaxonomies\FunctionAPIFactory::getInstance();
         $tag = $resultItem;
         switch ($fieldName) {
             case 'symbol':
@@ -66,7 +66,7 @@ class TagFunctionalFieldResolver extends AbstractDBDataFieldResolver
                 return TagHelpers::getTagNameDescription($tag);
 
             case 'symbolname':
-                return $cmseverythingelseresolver->getTagSymbolName($tag);
+                return $applicationtaxonomyapi->getTagSymbolName($tag);
         }
 
         return parent::resolveValue($typeResolver, $resultItem, $fieldName, $fieldArgs, $variables, $expressions, $options);

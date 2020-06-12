@@ -21,11 +21,12 @@ class TagHelpers
 
     public static function getTagSymbolNameDescription($tag)
     {
-        $cmseverythingelseresolver = \PoP\EverythingElse\ObjectPropertyResolverFactory::getInstance();
-        $value = $cmseverythingelseresolver->getTagSymbolName($tag);
+        $cmstaxonomiesresolver = \PoP\Taxonomies\ObjectPropertyResolverFactory::getInstance();
+        $applicationtaxonomyapi = \PoP\ApplicationTaxonomies\FunctionAPIFactory::getInstance();
+        $value = $applicationtaxonomyapi->getTagSymbolName($tag);
 
         // If there's a description, then use it
-        if ($description = $cmseverythingelseresolver->getTagDescription($tag)) {
+        if ($description = $cmstaxonomiesresolver->getTagDescription($tag)) {
             $value = sprintf(
                 TranslationAPIFacade::getInstance()->__('%1$s (%2$s)', 'pop-everythingelse'),
                 $value,
@@ -38,11 +39,11 @@ class TagHelpers
 
     public static function getTagNameDescription($tag)
     {
-        $cmseverythingelseresolver = \PoP\EverythingElse\ObjectPropertyResolverFactory::getInstance();
-        $value = $cmseverythingelseresolver->getTagName($tag);
+        $cmstaxonomiesresolver = \PoP\Taxonomies\ObjectPropertyResolverFactory::getInstance();
+        $value = $cmstaxonomiesresolver->getTagName($tag);
 
         // If there's a description, then use it
-        if ($description = $cmseverythingelseresolver->getTagDescription($tag)) {
+        if ($description = $cmstaxonomiesresolver->getTagDescription($tag)) {
             $value = sprintf(
                 TranslationAPIFacade::getInstance()->__('%1$s (%2$s)', 'pop-application'),
                 $value,
