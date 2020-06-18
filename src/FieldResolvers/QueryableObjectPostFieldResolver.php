@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace PoP\EverythingElse\FieldResolvers;
 
+use PoP\API\APIUtils;
 use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
-use PoP\CustomPosts\FieldInterfaces\CustomPostFieldInterfaceResolver;
-use PoP\API\APIUtils;
+use PoP\QueriedObject\FieldInterfaces\QueryableObjectFieldInterfaceResolver;
 
-class CustomPostFieldResolver extends AbstractDBDataFieldResolver
+class QueryableObjectPostFieldResolver extends AbstractDBDataFieldResolver
 {
     public static function getClassesToAttachTo(): array
     {
         return [
-            CustomPostFieldInterfaceResolver::class,
+            QueryableObjectFieldInterfaceResolver::class,
         ];
     }
 
@@ -39,7 +39,7 @@ class CustomPostFieldResolver extends AbstractDBDataFieldResolver
     {
         $translationAPI = TranslationAPIFacade::getInstance();
         $descriptions = [
-            'endpoint' => $translationAPI->__('Endpoint to fetch the post\'s data', 'pop-posts'),
+            'endpoint' => $translationAPI->__('Endpoint to fetch the object\'s data', 'queriedobject'),
         ];
         return $descriptions[$fieldName] ?? parent::getSchemaFieldDescription($typeResolver, $fieldName);
     }
