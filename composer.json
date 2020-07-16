@@ -19,7 +19,7 @@
     "prefer-stable": true,
     "require": {
         "php" : "~7.1",
-        "getpop/taxonomies": "dev-master",
+        "getpop/tags": "dev-master",
         "getpop/migrate-everythingelse": "dev-master"
     },
     "require-dev": {

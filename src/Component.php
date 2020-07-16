@@ -20,7 +20,7 @@ class Component extends AbstractComponent
     public static function getDependedComponentClasses(): array
     {
         return [
-            \PoP\Taxonomies\Component::class,
+            \PoP\Tags\Component::class,
         ];
     }
 
