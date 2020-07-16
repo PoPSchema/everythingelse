@@ -21,7 +21,7 @@ class TagHelpers
 
     public static function getTagSymbolNameDescription($tag)
     {
-        $cmstaxonomiesresolver = \PoP\Taxonomies\ObjectPropertyResolverFactory::getInstance();
+        $cmstaxonomiesresolver = \PoP\Tags\ObjectPropertyResolverFactory::getInstance();
         $applicationtaxonomyapi = \PoP\ApplicationTaxonomies\FunctionAPIFactory::getInstance();
         $value = $applicationtaxonomyapi->getTagSymbolName($tag);
 
@@ -39,7 +39,7 @@ class TagHelpers
 
     public static function getTagNameDescription($tag)
     {
-        $cmstaxonomiesresolver = \PoP\Taxonomies\ObjectPropertyResolverFactory::getInstance();
+        $cmstaxonomiesresolver = \PoP\Tags\ObjectPropertyResolverFactory::getInstance();
         $value = $cmstaxonomiesresolver->getTagName($tag);
 
         // If there's a description, then use it
