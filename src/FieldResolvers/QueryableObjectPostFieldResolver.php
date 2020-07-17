@@ -9,14 +9,14 @@ use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
-use PoP\QueriedObject\FieldInterfaces\QueryableObjectFieldInterfaceResolver;
+use PoP\QueriedObject\FieldInterfaces\QueryableFieldInterfaceResolver;
 
 class QueryableObjectPostFieldResolver extends AbstractDBDataFieldResolver
 {
     public static function getClassesToAttachTo(): array
     {
         return [
-            QueryableObjectFieldInterfaceResolver::class,
+            QueryableFieldInterfaceResolver::class,
         ];
     }
 
