@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PoP\EverythingElse\Misc;
+namespace PoPSchema\EverythingElse\Misc;
 
 use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\Hooks\Facades\HooksAPIFacade;
@@ -21,7 +21,7 @@ class TagHelpers
 
     public static function getTagSymbolNameDescription($tag)
     {
-        $cmstaxonomiesresolver = \PoP\Tags\ObjectPropertyResolverFactory::getInstance();
+        $cmstaxonomiesresolver = \PoPSchema\Tags\ObjectPropertyResolverFactory::getInstance();
         $applicationtaxonomyapi = \PoP\ApplicationTaxonomies\FunctionAPIFactory::getInstance();
         $value = $applicationtaxonomyapi->getTagSymbolName($tag);
 
@@ -39,7 +39,7 @@ class TagHelpers
 
     public static function getTagNameDescription($tag)
     {
-        $cmstaxonomiesresolver = \PoP\Tags\ObjectPropertyResolverFactory::getInstance();
+        $cmstaxonomiesresolver = \PoPSchema\Tags\ObjectPropertyResolverFactory::getInstance();
         $value = $cmstaxonomiesresolver->getTagName($tag);
 
         // If there's a description, then use it

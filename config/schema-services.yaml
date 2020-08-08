@@ -1,4 +1,4 @@
 services:
-    PoP\EverythingElse\FieldResolvers\:
+    PoPSchema\EverythingElse\FieldResolvers\:
         resource: '../src/FieldResolvers/*'
         public: true

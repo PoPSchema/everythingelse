@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace PoP\Comments\FieldResolvers;
+namespace PoPSchema\Comments\FieldResolvers;
 
 use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
-use PoP\CustomPosts\FieldInterfaceResolvers\IsCustomPostFieldInterfaceResolver;
+use PoPSchema\CustomPosts\FieldInterfaceResolvers\IsCustomPostFieldInterfaceResolver;
 
 class Comments_CustomPostFieldResolver extends AbstractDBDataFieldResolver
 {
@@ -45,7 +45,7 @@ class Comments_CustomPostFieldResolver extends AbstractDBDataFieldResolver
 
     public function resolveValue(TypeResolverInterface $typeResolver, $resultItem, string $fieldName, array $fieldArgs = [], ?array $variables = null, ?array $expressions = null, array $options = [])
     {
-        $cmscommentsapi = \PoP\Comments\FunctionAPIFactory::getInstance();
+        $cmscommentsapi = \PoPSchema\Comments\FunctionAPIFactory::getInstance();
         $post = $resultItem;
         switch ($fieldName) {
             case 'commentsURL':

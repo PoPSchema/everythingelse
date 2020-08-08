@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PoP\EverythingElse\FieldResolvers;
+namespace PoPSchema\EverythingElse\FieldResolvers;
 
 use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
-use PoP\EverythingElse\TypeResolvers\TagTypeResolver;
-use PoP\EverythingElse\Misc\TagHelpers;
+use PoPSchema\EverythingElse\TypeResolvers\TagTypeResolver;
+use PoPSchema\EverythingElse\Misc\TagHelpers;
 
 class TagFunctionalFieldResolver extends AbstractDBDataFieldResolver
 {

@@ -1,5 +1,5 @@
 {
-    "name": "getpop/everythingelse",
+    "name": "pop-schema/everythingelse",
     "type": "library",
     "description": "All code from a PoP application that has been migrated but not to its rightful and final destination",
     "keywords": [
@@ -19,8 +19,8 @@
     "prefer-stable": true,
     "require": {
         "php": "~7.2",
-        "getpop/tags": "dev-master",
-        "getpop/migrate-everythingelse": "dev-master"
+        "pop-schema/tags": "dev-master",
+        "pop-schema/migrate-everythingelse": "dev-master"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "PoP\\EverythingElse\\": "src"
+            "PoPSchema\\EverythingElse\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PoP\\EverythingElse\\": "tests"
+            "PoPSchema\\EverythingElse\\": "tests"
         }
     },
     "scripts": {

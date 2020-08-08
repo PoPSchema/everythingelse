@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PoP\EverythingElse;
+namespace PoPSchema\EverythingElse;
 
 use PoP\Root\Component\AbstractComponent;
 use PoP\Root\Component\YAMLServicesTrait;
@@ -20,7 +20,7 @@ class Component extends AbstractComponent
     public static function getDependedComponentClasses(): array
     {
         return [
-            \PoP\Tags\Component::class,
+            \PoPSchema\Tags\Component::class,
         ];
     }
 

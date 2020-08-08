@@ -17,7 +17,7 @@ All code from a PoP application that has been migrated but not to its rightful a
 Via Composer
 
 ``` bash
-composer require getpop/everythingelse
+composer require pop-schema/everythingelse
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ Initialize the component:
 
 ``` php
 \PoP\Root\ComponentLoader::initializeComponents([
-    \PoP\EverythingElse\Component::class,
+    \PoPSchema\EverythingElse\Component::class,
 ]);
 ```
 
@@ -75,17 +75,17 @@ If you discover any security related issues, please email leo@getpop.org instead
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/getpop/everythingelse.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/pop-schema/everythingelse.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/getpop/everythingelse/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/getpop/everythingelse.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/getpop/everythingelse.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/getpop/everythingelse.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/pop-schema/everythingelse/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/pop-schema/everythingelse.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/pop-schema/everythingelse.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/pop-schema/everythingelse.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/getpop/everythingelse
-[link-travis]: https://travis-ci.org/getpop/everythingelse
-[link-scrutinizer]: https://scrutinizer-ci.com/g/getpop/everythingelse/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/getpop/everythingelse
-[link-downloads]: https://packagist.org/packages/getpop/everythingelse
+[link-packagist]: https://packagist.org/packages/pop-schema/everythingelse
+[link-travis]: https://travis-ci.org/pop-schema/everythingelse
+[link-scrutinizer]: https://scrutinizer-ci.com/g/pop-schema/everythingelse/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/pop-schema/everythingelse
+[link-downloads]: https://packagist.org/packages/pop-schema/everythingelse
 [link-author]: https://github.com/leoloso
 [link-contributors]: ../../contributors

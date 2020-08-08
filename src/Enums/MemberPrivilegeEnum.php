@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PoP\EverythingElse\Enums;
+namespace PoPSchema\EverythingElse\Enums;
 
 use PoP\ComponentModel\Enums\AbstractEnum;
 

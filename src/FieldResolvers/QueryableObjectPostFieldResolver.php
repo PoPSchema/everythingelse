@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PoP\EverythingElse\FieldResolvers;
+namespace PoPSchema\EverythingElse\FieldResolvers;
 
 use PoP\API\APIUtils;
 use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
-use PoP\QueriedObject\FieldInterfaceResolvers\QueryableFieldInterfaceResolver;
+use PoPSchema\QueriedObject\FieldInterfaceResolvers\QueryableFieldInterfaceResolver;
 
 class QueryableObjectPostFieldResolver extends AbstractDBDataFieldResolver
 {
