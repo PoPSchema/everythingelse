@@ -10,6 +10,7 @@ use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
 use PoPSchema\CustomPosts\FieldInterfaceResolvers\IsCustomPostFieldInterfaceResolver;
+use PoPSchema\SchemaCommons\DataLoading\ReturnTypes;
 
 class CustomPostFieldResolver extends AbstractDBDataFieldResolver
 {
@@ -61,7 +62,7 @@ class CustomPostFieldResolver extends AbstractDBDataFieldResolver
         $post = $resultItem;
         switch ($fieldName) {
             case 'tagNames':
-                return $tagapi->getCustomPostTags($typeResolver->getID($post), [], ['return-type' => POP_RETURNTYPE_NAMES]);
+                return $tagapi->getCustomPostTags($typeResolver->getID($post), [], ['return-type' => ReturnTypes::NAMES]);
         }
 
         return parent::resolveValue($typeResolver, $resultItem, $fieldName, $fieldArgs, $variables, $expressions, $options);
